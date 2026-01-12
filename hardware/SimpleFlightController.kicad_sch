@@ -6566,12 +6566,6 @@
 		(uuid "0a9370a8-4efd-4682-8a22-3061058e475d")
 	)
 	(junction
-		(at 234.95 267.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0ff60540-0723-4507-9048-ad787a5ab805")
-	)
-	(junction
 		(at 49.53 254)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6812,6 +6806,12 @@
 		(uuid "66a5b38f-1863-4161-bd2e-2c6ddb9e01e4")
 	)
 	(junction
+		(at 251.46 267.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69c5b1f9-369e-4b3e-98af-b62f3063cade")
+	)
+	(junction
 		(at 134.62 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7004,6 +7004,12 @@
 		(uuid "b461777d-d766-42e2-8048-f9e941abf8e0")
 	)
 	(junction
+		(at 251.46 260.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4f1e8d9-83a2-4f5f-b196-9cee91d73437")
+	)
+	(junction
 		(at 224.79 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7074,12 +7080,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d13fe80c-7d7b-4d63-b772-a961f3e9e058")
-	)
-	(junction
-		(at 234.95 260.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d1ca93c2-449c-449b-9b4f-b29096213b19")
 	)
 	(junction
 		(at 342.9 107.95)
@@ -8544,7 +8544,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 275.59) (xy 255.27 275.59)
+			(xy 251.46 275.59) (xy 255.27 275.59)
 		)
 		(stroke
 			(width 0)
@@ -8561,16 +8561,6 @@
 			(type default)
 		)
 		(uuid "5a80f332-3cce-4675-8cfc-97e879e4465e")
-	)
-	(wire
-		(pts
-			(xy 234.95 260.35) (xy 241.3 260.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a8775c7-ae84-48b3-8f92-5e1a588d6933")
 	)
 	(wire
 		(pts
@@ -9045,7 +9035,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 267.97) (xy 234.95 267.97)
+			(xy 227.33 267.97) (xy 251.46 267.97)
 		)
 		(stroke
 			(width 0)
@@ -9709,6 +9699,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 260.35) (xy 251.46 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adebddd8-a860-4e0f-82cf-36d1cb55c84a")
+	)
+	(wire
+		(pts
 			(xy 39.37 254) (xy 49.53 254)
 		)
 		(stroke
@@ -10351,7 +10351,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 260.35) (xy 234.95 260.35)
+			(xy 231.14 260.35) (xy 237.49 260.35)
 		)
 		(stroke
 			(width 0)
@@ -15223,7 +15223,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 234.95 271.78 180)
+		(at 251.46 271.78 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15231,7 +15232,7 @@
 		(dnp no)
 		(uuid "75c7d3bd-bf2c-4aa7-ade0-565f78d6d58c")
 		(property "Reference" "R15"
-			(at 238.76 270.256 0)
+			(at 247.65 270.256 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15239,7 +15240,7 @@
 			)
 		)
 		(property "Value" "22.1K"
-			(at 239.522 272.542 0)
+			(at 246.888 272.542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15247,7 +15248,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 236.728 271.78 90)
+			(at 249.682 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15256,7 +15257,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 271.78 0)
+			(at 251.46 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15265,7 +15266,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 234.95 271.78 0)
+			(at 251.46 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15969,7 +15970,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "894b0b69-92bc-44fd-a31b-4bb0ea8c0c73")
 		(property "Reference" "C15"
 			(at 234.95 255.2699 0)
@@ -15981,7 +15981,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 234.95 257.8099 0)
+			(at 233.934 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16429,7 +16429,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 234.95 264.16 180)
+		(at 251.46 264.16 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16437,7 +16438,7 @@
 		(dnp no)
 		(uuid "90deae7a-f8d8-4cd2-825d-5a119370288f")
 		(property "Reference" "R14"
-			(at 238.76 262.636 0)
+			(at 247.65 262.636 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16445,7 +16446,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 239.268 264.922 0)
+			(at 247.142 264.922 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16453,7 +16454,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 236.728 264.16 90)
+			(at 249.682 264.16 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16462,7 +16463,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 264.16 0)
+			(at 251.46 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16471,7 +16472,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 234.95 264.16 0)
+			(at 251.46 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17162,7 +17163,7 @@
 	)
 	(symbol
 		(lib_id "lcsc:YHNR3015-5R6M")
-		(at 246.38 260.35 0)
+		(at 242.57 260.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17170,7 +17171,7 @@
 		(dnp no)
 		(uuid "a8e48c87-28e2-4ac9-842b-7f4ecc9c9232")
 		(property "Reference" "L7"
-			(at 246.38 254 0)
+			(at 242.57 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17178,7 +17179,7 @@
 			)
 		)
 		(property "Value" "YHNR3015-5R6M"
-			(at 251.206 257.556 0)
+			(at 249.428 257.556 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17186,7 +17187,7 @@
 			)
 		)
 		(property "Footprint" "lcsc:IND-SMD_L3.0-W3.0"
-			(at 246.38 267.97 0)
+			(at 242.57 267.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17195,7 +17196,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 260.35 0)
+			(at 242.57 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17204,7 +17205,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 246.38 260.35 0)
+			(at 242.57 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17213,7 +17214,7 @@
 			)
 		)
 		(property "LCSC Part" "C18236327"
-			(at 246.38 270.51 0)
+			(at 242.57 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
