@@ -1,4 +1,4 @@
-![Flight Controller Render](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/render_cropped.webp)
+![Flight Controller Render](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/blender/render_cropped.webp)
 
 # How to make a flight controller (from scratch)
 
@@ -742,8 +742,7 @@ The lines in yellow are components whose footprints we have to assign:
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/footprint_assignment_list.png)
 
 But since it's mainly resistors and capacitors, that makes it a lot easier.
-Since we're designing a flight controller, this has to be as small as possible, so I am going to be choosing the smallest footprints I can (while staying within good practices). The smaller the footprint, the more it can heat up and the less it can tolerate (for resistors and capacitors). A rule of thumb that I go by is any resistors under 80K I assign a 0201 footprint, over that and it's 0402. For capacitors, any `bulk capacitors` (capacitors that have high values like 4.7 µF or 10 µF) I usually assign 0402. Any bigger than 10 µF and I assign 0805, but it depends on the datasheet of the component. Under the application and implementation section there is usually a table that specifies which footprints/components to use. 
-
+Since we're designing a flight controller, this has to be as small as possible, so I am going to be choosing the smallest footprints I can (while staying within good practices). The smaller the footprint, the more it can heat up and the less it can tolerate (for resistors and capacitors). A rule of thumb that I go by is any resistors under 80K I assign a 0201 footprint, over that and it's 0402. For capacitors, any `bulk capacitors` (capacitors that have high values like 4.7 µF or 10 µF) I usually assign 0402. Any bigger than 10 µF and I assign 0805, but it depends on the datasheet of the component. Under the application and implementation section there is usually a table that specifies which footprints/components to use.
 
 Now all that's left is to finish adding the footprints for these symbols:
 
@@ -759,7 +758,6 @@ The inductors are a bit trickier. For this, you're gonna have to go into the dat
 
 For that `5.6uH` inductor, I am going to be using `C18236327` (LCSC Part Number).
 
-
 For the 5V buck-boost, I am going to be using `C3033018`. I also noticed that I had the inductor value wrong from the datasheet. **THIS IS WHY DOUBLE CHECKING IS IMPORTANT:**
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/inductor_value_correction.png)
@@ -767,7 +765,6 @@ For the 5V buck-boost, I am going to be using `C3033018`. I also noticed that I 
 For the final inductor in the battery charging IC, I am going to use `C435392`.
 
 Press `Apply, Save Schematic & Continue` to save the footprints you have already placed and then import the new inductors that you have selected.
-
 
 # PCB Layout
 
@@ -811,7 +808,7 @@ Then going back to the PCB editor, you should see that the connector and its par
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_usbc_components_placed.png)
 
-Do the same for each of the sections and after you've done that you should get something like this: 
+Do the same for each of the sections and after you've done that you should get something like this:
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_all_groups_separated.png)
 
@@ -933,7 +930,7 @@ Starting with the USB-C data lines, these are what's known as a `differential pa
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_usb_differential_start.png)
 
-Then go to `Route > Route Differential Pair` 
+Then go to `Route > Route Differential Pair`
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_route_differential_pair_menu.png)
 and then click on the USB_DP to the far right:
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_usb_differential_routing.png)
@@ -961,12 +958,11 @@ Sometimes for VBUS on USB-C or any other component, you might have vias that can
 
 ![VBUS Routing Fixed](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_vbus_routing_fixed.png)
 
-If KiCad doesn't let you place a via on a pad for whatever reason, you can edit the clearance in `Board Setup > Net Classes`. I set it to 0.15, but try not to set it any lower as the minimum for JLCPCB is `0.1mm`: 
+If KiCad doesn't let you place a via on a pad for whatever reason, you can edit the clearance in `Board Setup > Net Classes`. I set it to 0.15, but try not to set it any lower as the minimum for JLCPCB is `0.1mm`:
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_net_classes_clearance.png)
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_via_on_pad_placed.png)
-
 
 This is how I routed the Battery charger:
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_battery_charger_routed.png)
@@ -1038,7 +1034,6 @@ Also Notice how I didn't connect the grounds together and connected both PGND an
 After connecting everything we are going to run `Check DRC` which basically checks the design rules and makes sure our board is ready for production.
 
 ![alt text](https://raw.githubusercontent.com/notaroomba/simpleflightcontroller/main/assets/pcb_drc_check_button.png)
-
 
 Then click on `Run DRC`:
 
@@ -1189,6 +1184,6 @@ Edit `main.c` and remember to keep your code inside the commented sections that 
 
 Follow the instructions in the [GitHub](https://github.com/stm32duino/Arduino_Core_STM32#getting-started)
 
----------
+---
 
 If you have any questions feel free to DM me on Slack (@NotARoomba) and if you want to check out my other projects, here's my [GitHub](https://github.com/notaroomba) / [Website](https://notaroomba.dev).
